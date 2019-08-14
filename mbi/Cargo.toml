@@ -1,0 +1,18 @@
+[package]
+name = "mbi"
+description = "A malbolge interpreter written in Rust."
+version = "1.0.0"
+authors = ["return"]
+keywords = ["malbolge", "interpreter", "esoteric", "vm"]
+categories = ["parser-implementations",  "command-line-interface"]
+edition = "2018"
+readme = "README.md"
+license = "GPL-3.0"
+
+documentation = "https://docs.rs/mbi"
+repository = "https://github.com/return/malbolge/blob/master/mbi/"
+
+[dependencies]
+
+clap = "~2.27.0"
+malbolge = { path = "..", version = "0.1.0" }

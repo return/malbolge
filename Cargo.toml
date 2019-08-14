@@ -1,0 +1,15 @@
+[package]
+name = "malbolge"
+description = "A implementation of the Malbolge Programming Language in Rust"
+version = "1.0.0"
+authors = ["return"]
+keywords = ["malbolge", "vm", "cryptography", "lang", "esoteric"]
+categories = ["parser-implementations",  "emulator"]
+edition = "2018"
+readme = "README.md"
+license = "GPL-3.0"
+
+documentation = "https://docs.rs/malbolge"
+repository = "https://github.com/return/malbolge"
+
+[dependencies]
