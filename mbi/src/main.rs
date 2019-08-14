@@ -3,14 +3,11 @@ use clap::{Arg, App};
 use malbolge::vm::*;
 use std::*;
 
-use std::io::Write;
-use std::fs::*;
-
 fn main() -> io::Result<()> {
     let matches = App::new("mbi")
         .version("1.0")
         .author("Calvin Hill <calvin@hakobaito.co.uk>")
-        .about("A safe malbolge interpeter in Rust")
+        .about("A safe malbolge interpreter written in Rust.")
         .arg(Arg::with_name("PROGRAM_FILE")
             .help("Sets the program file to execute")
             .required(false)
@@ -25,6 +22,6 @@ fn main() -> io::Result<()> {
             Ok(())
     }
     else {
-        println!("{}",matches.usage());
+        Ok(println!("{}",matches.usage()))
     }
 }

@@ -13,6 +13,18 @@ Hello!
 ```
 This implementation is written in pure Rust and a port from the reference C and Java implementations and is able to execute programs written in Malbolge.
 
+
+This is a Malbolge implementation of the UNIX `cat` program.
+````
+(=BA#9"=<;:3y7x54-21q/p-,+*)"!h%B0/.
+~P<
+<:(8&
+66#"!~}|{zyxwvu
+gJ%
+````
+
+See the examples for more malbolge programs.
+
 ### Programming in Malbolge
 
 Well I don't know why anyone would want to do this, but I guess you really want to know so here it goes.
