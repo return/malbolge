@@ -1,6 +1,11 @@
 ## Malbolge interpreter in Rust
 
+('&%:9]!~}|z2Vxwv-,POqponl$Hjig%eB@@>}=<M:9wv6WsU2T|nm-,jcL(I&%$#"
+`CB]V?Tx<uVtT`Rpo3NlF.Jh++FdbCBA@?]!~|4XzyTT43Qsqq(Lnmkj"Fhg${z@>
+
 ### What on earth?
+
+That right there is a Hello World in Malbolge.
 
 What you are looking at is a language which is something worse than all languages out there. It's more esoteric than Brainfu*k and it is even harder to read and write than its friend Befunge.
 
@@ -23,7 +28,15 @@ This is a Malbolge implementation of the UNIX `cat` program.
 gJ%
 ````
 
-See the examples for more malbolge programs.
+There is also a macro available to pass in a raw Malbolge binary using a raw string literal.
+
+This is the same program that prints Hello!.
+
+```rust
+malbolge!(r#"(=<`#9]76Z{z2V0/S-Qr*)M:,+*)('&%$#"!~}|{z(Kw%$t"Vq0iAm,,j<h'`%"#);
+```
+
+See the examples for more non-trivial malbolge programs.
 
 ### Programming in Malbolge
 
