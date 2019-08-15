@@ -21,7 +21,7 @@ mod tests {
     fn malbolge_hello(){
         let mut vm = VirtualMachine::new(false);
         let mut test_path = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
-        test_path.push("./mbi/examples/hello.mal");
+        test_path.push("./mbi/examples/hello.mb");
         vm.load_program(test_path);
         vm.exec();
     }
@@ -29,7 +29,7 @@ mod tests {
     #[test]
     fn malbolge_load_path() {
         let mut test_path = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
-        test_path.push("./mbi/examples/cat.mal");
+        test_path.push("./mbi/examples/cat.mb");
         let vm = VirtualMachine::new(false).load_program(test_path);
         assert_eq!(vm, true);
     }

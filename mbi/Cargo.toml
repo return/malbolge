@@ -1,6 +1,6 @@
 [package]
 name = "mbi"
-description = "A safe malbolge interpreter written in Rust."
+description = "A safe Malbolge interpreter written in Rust."
 version = "1.0.0"
 authors = ["return"]
 keywords = ["malbolge", "interpreter", "esoteric", "vm"]
@@ -15,4 +15,4 @@ repository = "https://github.com/return/malbolge/blob/master/mbi/"
 [dependencies]
 
 clap = "~2.27.0"
-malbolge = "1.0.0"
+malbolge = "^1.0.1"
