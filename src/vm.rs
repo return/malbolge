@@ -95,7 +95,7 @@ impl VirtualMachine {
         true
     }
 
-    pub fn load(&mut self, prog: Vec<u8> ) -> bool {
+    pub fn load(&mut self, prog: Vec<u8>) -> bool {
 
             self.memory = vec![0u32 as usize; self.mem_size];
 
@@ -137,7 +137,9 @@ impl VirtualMachine {
 
             source.copy_from_slice( &self.memory[0..op_code_index]);
 
-            self::VirtualMachine::program_decrypted(source);
+            if self.debug == true {
+                self::VirtualMachine::program_decrypted(source);
+            }
 
             while op_code_index < self.mem_size {
 
@@ -148,7 +150,7 @@ impl VirtualMachine {
                 op_code_index += 1;
             }
 
-        if self.debug == true{
+        if self.debug == true {
             println!("Program Loaded, Size: {}", source_index);
         }
 
@@ -157,11 +159,14 @@ impl VirtualMachine {
 
 
     pub fn exec(&mut self) {
+
         let mut reg_a: usize = 0;
         let mut reg_c: usize = 0;
         let mut reg_d: usize = 0;
 
-        self::VirtualMachine::on_execute_started();
+        if self.debug == true {
+            self::VirtualMachine::on_execute_started();
+        }
 
         loop {
 
@@ -190,7 +195,6 @@ impl VirtualMachine {
                     self.stdout.flush().unwrap();
                 }
                 '/' => {
-
                     let mut buf: [u8; 1] = Default::default();
                     let _handle = self.stdin.read(&mut buf).unwrap();
                     let mut in_var = buf[0];
@@ -201,7 +205,7 @@ impl VirtualMachine {
                     else if buf.is_empty() {
                         in_var = self.max_value as u8;
                     }
-                    reg_a =  usize::from( in_var); //buf[0]);
+                    reg_a =  usize::from(in_var);
                 }
                 'v' => { return; }
                 _ => {}
