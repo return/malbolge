@@ -1,10 +1,10 @@
 [package]
 name = "mbi"
 description = "A safe Malbolge interpreter written in Rust."
-version = "1.0.0"
+version = "1.0.1"
 authors = ["return"]
 keywords = ["malbolge", "interpreter", "esoteric", "vm"]
-categories = ["parser-implementations",  "command-line-interface"]
+categories = ["parser-implementations", "parsing", "emulators", "cryptography" ]
 edition = "2018"
 readme = "README.md"
 license = "GPL-3.0"
